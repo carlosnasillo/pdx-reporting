@@ -1,104 +1,300 @@
 @()
 
-@main{
- <!-- Wrapper-->
- <div class="wrapper">
+@main {
+    <!-- Wrapper-->
+    <div class="wrapper">
 
-   <!-- Header-->
-  <nav class="navbar navbar-default navbar-fixed-top">
-   <div class="container-fluid">
-    <div class="navbar-header">
-     <div id="mobile-menu">
-      <div class="left-nav-toggle">
-       <a href="#">
-        <i class="stroke-hamburgermenu"></i>
-       </a>
-      </div>
-     </div>
-     <a class="navbar-brand" href="index.html">
-      LUNA
-      <span>v.1.0</span>
-     </a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-     <div class="left-nav-toggle">
-      <a href="">
-       <i class="stroke-hamburgermenu"></i>
-      </a>
-     </div>
-     <ul class="nav navbar-nav navbar-right">
-      <li class=" profil-link">
-       <a href="login.html">
-        <span class="profile-address">luna@@company.io</span>
-        <img src="@routes.Assets.versioned("images/profile.jpg")" class="img-circle" alt="">
-       </a>
-      </li>
-     </ul>
-    </div>
-   </div>
-  </nav>
-   <!-- End header-->
+            <!-- Header-->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div id="mobile-menu">
+                        <div class="left-nav-toggle">
+                            <a href="#">
+                                <i class="stroke-hamburgermenu"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="navbar-brand" href="index.html">
+                        LUNA
+                        <span>v.1.0</span>
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="left-nav-toggle">
+                        <a href="">
+                            <i class="stroke-hamburgermenu"></i>
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class=" profil-link">
+                            <a href="login.html">
+                                <span class="profile-address">luna@@company.io</span>
+                                <img src="@routes.Assets.versioned("images/profile.jpg")" class="img-circle" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+            <!-- End header-->
 
-   <!-- Navigation-->
-  <aside class="navigation">
-   <nav>
-    <ul class="nav luna-nav">
-     <li class="nav-category">
-      Main
-     </li>
-     <li class="active">
-      <a href="index.html">Index</a>
-     </li>
+            <!-- Navigation-->
+        <aside class="navigation">
+            <nav>
+                <ul class="nav luna-nav">
+                    <li class="nav-category">
+                        Main
+                    </li>
+                    <li class="active">
+                        <a href="index.html">Index</a>
+                    </li>
 
-     <li class="nav-info">
-      <div class="m-t-xs">
-       <span class="c-white">Example</span> text.
-       <br/>
-        <!-- HOW TO REMOVE THIS SECTION -->
-        <!--<span>
+                    <li class="nav-info">
+                        <div class="m-t-xs">
+                            <span class="c-white">Example</span> text.
+                            <br/>
+                                <!-- HOW TO REMOVE THIS SECTION -->
+                                <!--<span>
                              If you don't want to have this section, just remove it from html and in your css replace:
                              .navigation:before { background-color: #24262d; } with
                              .navigation:before { background-color: #2a2d35; }
                              and
                              .navigation { background-color: #24262d; }</code> with <code>.navigation { background-color: #2a2d35; }
                          </span>-->
-      </div>
-     </li>
-    </ul>
-   </nav>
-  </aside>
-   <!-- End navigation-->
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+            <!-- End navigation-->
 
 
-   <!-- Main content-->
-  <section class="content">
-   <div class="container-fluid">
+            <!-- Main content-->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="col-md-6">
+                            <div class="panel panel-filled dashboard-box">
+                                <div class="panel-heading">
+                                    <h2>Portfolio Summary</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>As of [Today]</th>
+                                                    <th>∆ Last Month</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Total Originator Balance</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Outstanding Balance</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-90 c-white"> </i> +20%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Purchases</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Scheduled Principal Paid</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-90 c-white"> </i> +20%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Prepayments</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Interest Paid</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-90 c-white"> </i> +20%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Charge-Offs</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20%</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
+                                </div>
+                            </div>
+                        </div>
 
-    <div class="row">
-     <div class="col-xs-12">
+                        <div class="col-md-6">
+                            <div class="panel panel-filled dashboard-box">
+                                <div class="panel-heading">
+                                    <h2>Loan Characteristics</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>As of [Today]</th>
+                                                    <th>∆ Last Month</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>WDT AVG DTI</td>
+                                                    <td>20%</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>WDT AVG ORIG FICO</td>
+                                                    <td>666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>WDT AVG Loan Age</td>
+                                                    <td>66</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +6</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>WDT AVG Maturity</td>
+                                                    <td>66</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-90 c-white"> </i> -7</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CDR</td>
+                                                    <td>66%</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>CPR</td>
+                                                    <td>66%</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
-      Content
+                                </div>
+                            </div>
+                        </div>
 
-     </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-filled dashboard-box">
+                                <div class="panel-heading">
+                                    <h2>Loan Deliquency</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Delinquency Breakout: 1-4 Mo Delinquent</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Active Payer</td>
+                                                    <td>$666666</td>
+                                                    <td>66%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Current</td>
+                                                    <td>$666666</td>
+                                                    <td>66%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Never Late</td>
+                                                    <td>$666666</td>
+                                                    <td>66%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Delinquent</td>
+                                                    <td>$666666</td>
+                                                    <td>66%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="panel panel-filled dashboard-box">
+                                <div class="panel-heading">
+                                    <h2>Returns</h2>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th></th>
+                                                    <th>As of [Today]</th>
+                                                    <th>∆ Last Month</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>WTD AVG Coupon</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Model Yield</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-90 c-white"> </i> +20%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Model Price</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Recoveries</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-90 c-white"> </i> +20%</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Interest Paid</td>
+                                                    <td>$6666666</td>
+                                                    <td><span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> +20%</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <!-- End main content-->
+
     </div>
+        <!-- End wrapper-->
 
+        <!-- Vendor scripts -->
+    <script src="@routes.Assets.versioned("vendor/pacejs/pace.min.js")"></script>
+    <script src="@routes.Assets.versioned("vendor/jquery/dist/jquery.min.js")"></script>
+    <script src="@routes.Assets.versioned("vendor/bootstrap/js/bootstrap.min.js")"></script>
 
-
-
-
-   </div>
-  </section>
-   <!-- End main content-->
-
- </div>
-  <!-- End wrapper-->
-
-  <!-- Vendor scripts -->
- <script src="@routes.Assets.versioned("vendor/pacejs/pace.min.js")"></script>
- <script src="@routes.Assets.versioned("vendor/jquery/dist/jquery.min.js")"></script>
- <script src="@routes.Assets.versioned("vendor/bootstrap/js/bootstrap.min.js")"></script>
-
-  <!-- App scripts -->
- <script src="@routes.Assets.versioned("scripts/luna.js")"></script>
+        <!-- App scripts -->
+    <script src="@routes.Assets.versioned("scripts/luna.js")"></script>
 }
