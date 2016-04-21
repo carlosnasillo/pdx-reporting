@@ -950,7 +950,6 @@ body {
 
 .content {
     margin-top: 60px;
-    margin-left: 200px;
     position: relative;
     padding: 30px;
     transition: margin-left 0.3s ease-out;
@@ -974,7 +973,7 @@ body {
 
 .navigation {
     margin-top: 60px;
-    background-color: #24262d;
+    background-color: #2a2d35;
     width: 200px;
     position: absolute;
     left: 0;
@@ -997,7 +996,7 @@ body {
     bottom: 0;
     z-index: -1;
     left: 0;
-    background-color: #24262d;
+    background-color: #2a2d35;
     width: 200px;
 }
 
