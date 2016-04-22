@@ -81,4 +81,21 @@
             position: 'inset'
         }
     });
+    
+    function renderData(objects) {
+        objects.forEach(function(o) {
+            renderObject(o, 'portfolioSummary');
+            renderObject(o, 'loansCharacteristics');
+            renderObject(o, 'loanDelinquency');
+            renderObject(o, 'returns');
+        });
+
+        function renderObject(o, prop) {
+            _.keys(o[prop]).forEach(function (k) {
+                $('#' + prop + '_' + k).html(o[prop][k]);
+            });
+        }
+    }
+
+    renderData(loadData());
 }());
