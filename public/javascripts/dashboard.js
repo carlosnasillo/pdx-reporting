@@ -83,4 +83,5 @@
     });
 
     renderData(loadData());
+    setDateHeaders();
 }());

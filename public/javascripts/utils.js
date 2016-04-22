@@ -48,3 +48,10 @@ function renderData(objects) {
         });
     }
 }
+
+function setDateHeaders() {
+    var date = new Date();
+    var prefix = 'As of ';
+    var str =  prefix + date.getMonth() + '/' + date.getDate() + '/' + date.getFullYear();
+    $('.asOfToday').html(str);
+}
