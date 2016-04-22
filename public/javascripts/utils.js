@@ -36,16 +36,16 @@ function renderData(objects) {
             if (k.indexOf('Delta') > 0) {
                 var num = parseFloat(o[prop][k]);
                 if (num > 0) {
-                    num = '<span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> ' + '+' + num + '</span>';
+                    num = d3.format('+,.2f')(num) + ' % <span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i></span>';
                 }
                 else if (num < 0) {
-                    num = '<span class="slight"><i class="fa fa-play fa-rotate-90 c-white"> </i> ' + num + '</span>';
+                    num = d3.format('+,.2f')(num) + ' % <span class="slight"><i class="fa fa-play fa-rotate-90 c-white"> </i></span>';
                 }
                 
                 elem.html(num);
             }
             else {
-                elem.html(o[prop][k]);
+                elem.html(d3.format(',.0f')(o[prop][k]));
             }
         });
     }
