@@ -29,7 +29,22 @@ function renderData(objects) {
 
     function renderObject(o, prop) {
         _.keys(o[prop]).forEach(function (k) {
-            $('#' + prop + '_' + k).html(o[prop][k]);
+            var elem = $('#' + prop + '_' + k);
+
+            if (k.indexOf('Delta') > 0) {
+                var num = parseFloat(o[prop][k]);
+                if (num > 0) {
+                    num = '<span class="slight"><i class="fa fa-play fa-rotate-270 text-warning"> </i> ' + '+' + num + '</span>';
+                }
+                else if (num < 0) {
+                    num = '<span class="slight"><i class="fa fa-play fa-rotate-90 c-white"> </i> ' + num + '</span>';
+                }
+                
+                elem.html(num);
+            }
+            else {
+                elem.html(o[prop][k]);
+            }
         });
     }
 }
