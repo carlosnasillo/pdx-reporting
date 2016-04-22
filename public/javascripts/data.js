@@ -67,11 +67,11 @@ function loadData() {
         },
         {
             properties: {
-                country: 'UK',
-                originator: 'LC',
-                policy: 'Unidentified'
+                country: 'USA',
+                originator: 'Funding Circle',
+                policy: 'SubPrime'
             },
-            quantity: 4053,
+            quantity: 953,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 666466308,
                 totalOriginatorBalanceDelta: 0,
