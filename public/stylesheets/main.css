@@ -9,3 +9,8 @@
 .number {
     text-align: right;
 }
+
+.filter-button {
+    margin-top: 13px;
+    margin-left: 10px;
+}

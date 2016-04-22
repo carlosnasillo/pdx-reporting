@@ -58,6 +58,27 @@ function setDateHeaders() {
     $('.asOfToday').html(str);
 }
 
+function updateFilterButtons() {
+    $('#filters').children().remove();
+
+    filters.forEach(function(filter) {
+        var elem = $('<a href="#" id="' + filter + '" class="btn btn-accent filter-button">' + filter + ' <i class="fa fa-times" aria-hidden="true"></i></a>');
+        elem.click(function() {
+            var id = $(this).attr('id');
+            filters = filters.filter(function(f) { return f !== id; });
+            updateData();
+            updateFilterButtons();
+        });
+        $('#filters').append(elem)
+    })
+}
+
+function onFilterUpdate(d) {
+    addFilter(d);
+    updateData();
+    updateFilterButtons();
+}
+
 function initPolicyChart(unidentified, neverPrime, prime, subPrime) {
     return c3.generate({
         bindto: '#policy',
@@ -69,10 +90,7 @@ function initPolicyChart(unidentified, neverPrime, prime, subPrime) {
                 ['Sub Prime', subPrime]
             ],
             type : 'donut',
-            onclick: function (d) {
-                addFilter(d);
-                updateData();
-            },
+            onclick: onFilterUpdate,
             colors: {
                 'Unidentified': '#f6a821',
                 'Never Prime': '#949ba2',
@@ -102,10 +120,7 @@ function initOriginatorChart(prosper, lc, fc) {
                 ['Funding Circle', fc]
             ],
             type : 'donut',
-            onclick: function (d) {
-                addFilter(d);
-                updateData();
-            },
+            onclick: onFilterUpdate,
             colors: {
                 'Prosper': '#f6a821',
                 'Lending Club': '#949ba2',
@@ -133,10 +148,7 @@ function initCountryChart(uk, usa) {
                 ['USA', usa]
             ],
             type : 'donut',
-            onclick: function (d) {
-                addFilter(d);
-                updateData();
-            },
+            onclick: onFilterUpdate,
             colors: {
                 UK: '#f6a821',
                 USA: '#949ba2'
@@ -196,8 +208,8 @@ function updateCharts(data) {
     var chartData = extractChartData(data);
 
     updateCountryChart(chartData.UK, chartData.USA);
-    updateOriginatorChart();
-    updatePolicyChart();
+    updateOriginatorChart(chartData.Prosper, chartData.LC, chartData['Funding Club']);
+    updatePolicyChart(chartData.Unidentified, chartData.NeverPrime, chartData.Prime, chartData.SubPrime);
 }
 
 function updateCountryChart(uk, usa) {
