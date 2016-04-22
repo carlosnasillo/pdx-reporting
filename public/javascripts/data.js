@@ -248,7 +248,7 @@ function loadData() {
         {
             properties: {
                 country: 'UK',
-                originator: 'LC',
+                originator: 'Lending Club',
                 policy: 'Unidentified'
             },
             quantity: 4782,
@@ -308,7 +308,7 @@ function loadData() {
         {
             properties: {
                 country: 'UK',
-                originator: 'LC',
+                originator: 'Lending Club',
                 policy: 'Never Prime'
             },
             quantity: 3456,
@@ -368,7 +368,7 @@ function loadData() {
         {
             properties: {
                 country: 'UK',
-                originator: 'LC',
+                originator: 'Lending Club',
                 policy: 'Prime'
             },
             quantity: 4289,
@@ -428,7 +428,7 @@ function loadData() {
         {
             properties: {
                 country: 'UK',
-                originator: 'LC',
+                originator: 'Lending Club',
                 policy: 'Sub Prime'
             },
             quantity: 4843,
@@ -968,7 +968,7 @@ function loadData() {
         {
             properties: {
                 country: 'US',
-                originator: 'LC',
+                originator: 'Lending Club',
                 policy: 'Unidentified'
             },
             quantity: 4188,
@@ -1028,7 +1028,7 @@ function loadData() {
         {
             properties: {
                 country: 'US',
-                originator: 'LC',
+                originator: 'Lending Club',
                 policy: 'Never Prime'
             },
             quantity: 3529,
@@ -1088,7 +1088,7 @@ function loadData() {
         {
             properties: {
                 country: 'US',
-                originator: 'LC',
+                originator: 'Lending Club',
                 policy: 'Prime'
             },
             quantity: 4789,
@@ -1148,7 +1148,7 @@ function loadData() {
         {
             properties: {
                 country: 'US',
-                originator: 'LC',
+                originator: 'Lending Club',
                 policy: 'Sub Prime'
             },
             quantity: 4817,

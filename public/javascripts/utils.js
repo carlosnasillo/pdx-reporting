@@ -145,13 +145,13 @@ function initCountryChart(uk, usa) {
         data: {
             columns: [
                 ['UK', uk],
-                ['USA', usa]
+                ['US', usa]
             ],
             type : 'donut',
             onclick: onFilterUpdate,
             colors: {
                 UK: '#f6a821',
-                USA: '#949ba2'
+                US: '#949ba2'
             }
         },
         donut: {
@@ -184,14 +184,14 @@ function extractChartData(data) {
         return prev;
     }, {
         UK: 0,
-        USA: 0,
+        US: 0,
         Prosper: 0,
-        LC: 0,
-        'Funding Club': 0,
+        'Lending Club': 0,
+        'Funding Circle': 0,
         Unidentified: 0,
-        NeverPrime: 0,
+        'Never Prime': 0,
         Prime: 0,
-        SubPrime: 0
+        'Sub Prime': 0
     });
 }
 
@@ -199,24 +199,24 @@ var countryChart, originatorChart, policyChart;
 function initCharts(data) {
     var chartsData = extractChartData(data);
 
-    countryChart = initCountryChart(chartsData.UK, chartsData.USA);
-    originatorChart = initOriginatorChart(chartsData.Prosper, chartsData.LC, chartsData['Funding Club']);
-    policyChart = initPolicyChart(chartsData.Unidentified, chartsData.NeverPrime, chartsData.Prime, chartsData.SubPrime);
+    countryChart = initCountryChart(chartsData.UK, chartsData.US);
+    originatorChart = initOriginatorChart(chartsData.Prosper, chartsData['Lending Club'], chartsData['Funding Circle']);
+    policyChart = initPolicyChart(chartsData.Unidentified, chartsData['Never Prime'], chartsData.Prime, chartsData['Sub Prime']);
 }
 
 function updateCharts(data) {
     var chartData = extractChartData(data);
 
-    updateCountryChart(chartData.UK, chartData.USA);
-    updateOriginatorChart(chartData.Prosper, chartData.LC, chartData['Funding Club']);
-    updatePolicyChart(chartData.Unidentified, chartData.NeverPrime, chartData.Prime, chartData.SubPrime);
+    updateCountryChart(chartData.UK, chartData.US);
+    updateOriginatorChart(chartData.Prosper, chartData['Lending Club'], chartData['Funding Circle']);
+    updatePolicyChart(chartData.Unidentified, chartData['Never Prime'], chartData.Prime, chartData['Sub Prime']);
 }
 
 function updateCountryChart(uk, usa) {
     countryChart.load({
         columns: [
             ['UK', uk],
-            ['USA', usa]
+            ['US', usa]
         ]});
 }
 
