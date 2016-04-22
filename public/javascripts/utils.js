@@ -3,6 +3,8 @@
 * Created on 22/04/2016
 */
 
+var filters = [];
+
 function renderData(objects) {
     var categories = ['portfolioSummary', 'loansCharacteristics', 'loanDelinquency', 'returns'];
 
@@ -67,7 +69,10 @@ function initPolicyChart(unidentified, neverPrime, prime, subPrime) {
                 ['Sub Prime', subPrime]
             ],
             type : 'donut',
-            onclick: function (d, i) { console.log("onclick", d, i); },
+            onclick: function (d) {
+                addFilter(d);
+                updateData();
+            },
             colors: {
                 'Unidentified': '#f6a821',
                 'Never Prime': '#949ba2',
@@ -97,7 +102,10 @@ function initOriginatorChart(prosper, lc, fc) {
                 ['Funding Circle', fc]
             ],
             type : 'donut',
-            onclick: function (d, i) { console.log("onclick", d, i); },
+            onclick: function (d) {
+                addFilter(d);
+                updateData();
+            },
             colors: {
                 'Prosper': '#f6a821',
                 'Lending Club': '#949ba2',
@@ -125,7 +133,10 @@ function initCountryChart(uk, usa) {
                 ['USA', usa]
             ],
             type : 'donut',
-            onclick: function (d, i) { console.log("onclick", d, i); },
+            onclick: function (d) {
+                addFilter(d);
+                updateData();
+            },
             colors: {
                 UK: '#f6a821',
                 USA: '#949ba2'
@@ -143,8 +154,12 @@ function initCountryChart(uk, usa) {
     });
 }
 
-function initCharts(data) {
-    var chartsData = data.reduce(function(prev, cur) {
+function addFilter(d) {
+    filters = _.uniq(filters.concat([d.id]));
+}
+
+function extractChartData(data) {
+    return data.reduce(function (prev, cur) {
         var country = cur.properties.country;
         var originator = cur.properties.originator;
         var policy = cur.properties.policy;
@@ -166,10 +181,60 @@ function initCharts(data) {
         Prime: 0,
         SubPrime: 0
     });
+}
 
-    var countryChart = initCountryChart(chartsData.UK, chartsData.USA);
-    var originatorChart = initOriginatorChart(chartsData.Prosper, chartsData.LC, chartsData['Funding Club']);
-    var policyChart = initPolicyChart(chartsData.Unidentified, chartsData.NeverPrime, chartsData.Prime, chartsData.SubPrime);
-    
-    return { country: countryChart, originator: originatorChart, policy: policyChart };
+var countryChart, originatorChart, policyChart;
+function initCharts(data) {
+    var chartsData = extractChartData(data);
+
+    countryChart = initCountryChart(chartsData.UK, chartsData.USA);
+    originatorChart = initOriginatorChart(chartsData.Prosper, chartsData.LC, chartsData['Funding Club']);
+    policyChart = initPolicyChart(chartsData.Unidentified, chartsData.NeverPrime, chartsData.Prime, chartsData.SubPrime);
+}
+
+function updateCharts(data) {
+    var chartData = extractChartData(data);
+
+    updateCountryChart(chartData.UK, chartData.USA);
+    updateOriginatorChart();
+    updatePolicyChart();
+}
+
+function updateCountryChart(uk, usa) {
+    countryChart.load({
+        columns: [
+            ['UK', uk],
+            ['USA', usa]
+        ]});
+}
+
+function updateOriginatorChart(prosper, lc, fc) {
+    originatorChart.load({
+        columns: [
+            ['Prosper', prosper],
+            ['Lending Club', lc],
+            ['Funding Circle', fc]
+        ]});
+}
+
+function updatePolicyChart(unidentified, neverPrime, prime, subPrime) {
+    policyChart.load({
+        columns: [
+            ['Unidentified', unidentified],
+            ['Never Prime', neverPrime],
+            ['Prime', prime],
+            ['Sub Prime', subPrime]
+        ]});
+}
+
+function updateData() {
+    var data = loadData();
+    var filteredData = filters.reduce(function(prev, cur) {
+        return prev.filter(function(elem) {
+            return [elem.properties.country, elem.properties.originator, elem.properties.policy].indexOf(cur) >= 0;
+        });
+    }, data);
+
+    renderData(filteredData);
+    updateCharts(filteredData);
 }
