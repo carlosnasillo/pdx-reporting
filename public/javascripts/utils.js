@@ -250,6 +250,8 @@ function initCharts(chartsData) {
     countryChart = initCountryChart(filterChartData(chartsData, countries));
     originatorChart = initOriginatorChart(filterChartData(chartsData, originators));
     policyChart = initPolicyChart(filterChartData(chartsData, policies));
+
+    fillUpChartLegendsInWhite();
 }
 
 function filterChartData(data, keysToKeep) {
@@ -371,4 +373,8 @@ function drawStackedHorizontalBarChart(data) {
     function resize () {
         var width = parseInt(d3.select("#chart").style("width"));
     }
+}
+
+function fillUpChartLegendsInWhite() {
+    $('.c3-legend-item text').each(function() { $(this).attr('fill', 'white'); });
 }
