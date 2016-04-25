@@ -124,7 +124,7 @@ function initPolicyChart(consumer, sme, auto, student, property) {
         donut: {
             width: 30,
             label: {
-                format: function(value, ratio, id) { return id; }
+                format: function() { return ''; }
             }
         },
         legend: {
@@ -156,7 +156,7 @@ function initOriginatorChart(prosper, lc, fc) {
         donut: {
             width: 30,
             label: {
-                format: function(value, ratio, id) { return id; }
+                format: function() { return ''; }
             }
         },
         legend: {
@@ -186,7 +186,7 @@ function initCountryChart(uk, usa) {
         donut: {
             width: 30,
             label: {
-                format: function(value, ratio, id) { return id; }
+                format: function() { return ''; }
             }
         },
         legend: {
