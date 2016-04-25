@@ -78,8 +78,20 @@ function renderData(objects) {
 function setDateHeaders() {
     var date = new Date();
     var prefix = 'As of ';
-    var str =  prefix + date.getMonth() + '/' + date.getDate() + '/' + date.getFullYear();
+
+    var day = date.getDate();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+
+    var str =  prefix + add0ifLowerThan10(day) + '/' + add0ifLowerThan10(month) + '/' + year;
     $('.asOfToday').html(str);
+
+    function add0ifLowerThan10(n) {
+        if (n < 10) {
+            return '0' + n;
+        }
+        return n;
+    }
 }
 
 function updateFilterButtons() {
