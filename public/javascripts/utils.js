@@ -197,8 +197,23 @@ function initCountryChart(data) {
     });
 }
 
+function isLastFilterOfThisCategoy(id) {
+    return [originators, countries, policies].some(function (category) {
+        if (category.indexOf(id) >= 0) {
+            var nbOfNotFilter = category
+                .filter(function (k) {
+                    return filters.indexOf(k) < 0;
+                })
+                .length;
+            return nbOfNotFilter != category.length;
+        }
+    });
+}
+
 function addFilter(id) {
-    filters = _.uniq(filters.concat([id]));
+    if (!isLastFilterOfThisCategoy(id)) {
+        filters = _.uniq(filters.concat([id]));
+    }
 }
 
 function extractChartData(data) {
