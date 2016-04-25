@@ -263,3 +263,16 @@ function updateData() {
     renderData(filteredData);
     updateCharts(filteredData);
 }
+
+function unifyHeights(classs) {
+    var maxHeight = 0;
+    var $data = $('.' + classs);
+    $data.css('height', '');
+    $data.each(function() {
+        var height = $(this).outerHeight();
+        if ( height > maxHeight ) {
+            maxHeight = height;
+        }
+    });
+    $data.css('height', maxHeight);
+}
