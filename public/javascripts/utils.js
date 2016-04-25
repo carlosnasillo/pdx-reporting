@@ -79,7 +79,7 @@ function onFilterUpdate(d) {
     updateFilterButtons();
 }
 
-function initPolicyChart(unidentified, neverPrime, prime, subPrime) {
+function initPolicyChart(consumer, sme, auto, student, property) {
     return c3.generate({
         tooltip: {
             show: false
@@ -87,18 +87,20 @@ function initPolicyChart(unidentified, neverPrime, prime, subPrime) {
         bindto: '#policy',
         data: {
             columns: [
-                ['Unidentified', unidentified],
-                ['Never Prime', neverPrime],
-                ['Prime', prime],
-                ['Sub Prime', subPrime]
+                ['Consumer', consumer],
+                ['SME', sme],
+                ['Auto', auto],
+                ['Student', student],
+                ['Property', property]
             ],
             type : 'donut',
             onclick: onFilterUpdate,
             colors: {
-                'Unidentified': '#f6a821',
-                'Never Prime': '#949ba2',
-                'Prime': '#c0392b',
-                'Sub Prime': '#616779'
+                'Consumer': '#f6a821',
+                'SME': '#949ba2',
+                'Auto': '#c0392b',
+                'Student': '#616779',
+                'Property': '#f9690e'
             }
         },
         donut: {
@@ -197,10 +199,11 @@ function extractChartData(data) {
         Prosper: 0,
         'Lending Club': 0,
         'Funding Circle': 0,
-        Unidentified: 0,
-        'Never Prime': 0,
-        Prime: 0,
-        'Sub Prime': 0
+        Consumer: 0,
+        SME: 0,
+        Auto: 0,
+        Student: 0,
+        Property: 0
     });
 }
 
@@ -210,7 +213,7 @@ function initCharts(data) {
 
     countryChart = initCountryChart(chartsData.UK, chartsData.US);
     originatorChart = initOriginatorChart(chartsData.Prosper, chartsData['Lending Club'], chartsData['Funding Circle']);
-    policyChart = initPolicyChart(chartsData.Unidentified, chartsData['Never Prime'], chartsData.Prime, chartsData['Sub Prime']);
+    policyChart = initPolicyChart(chartsData.Consumer, chartsData.SME, chartsData.Auto, chartsData.Student, chartsData.Property);
 }
 
 function updateCharts(data) {
@@ -218,7 +221,7 @@ function updateCharts(data) {
 
     updateCountryChart(chartData.UK, chartData.US);
     updateOriginatorChart(chartData.Prosper, chartData['Lending Club'], chartData['Funding Circle']);
-    updatePolicyChart(chartData.Unidentified, chartData['Never Prime'], chartData.Prime, chartData['Sub Prime']);
+    updatePolicyChart(chartData.Consumer, chartData.SME, chartData.Auto, chartData.Student, chartData.Property);
 }
 
 function updateCountryChart(uk, usa) {
@@ -238,13 +241,14 @@ function updateOriginatorChart(prosper, lc, fc) {
         ]});
 }
 
-function updatePolicyChart(unidentified, neverPrime, prime, subPrime) {
+function updatePolicyChart(consumer, sme, auto, student, property) {
     policyChart.load({
         columns: [
-            ['Unidentified', unidentified],
-            ['Never Prime', neverPrime],
-            ['Prime', prime],
-            ['Sub Prime', subPrime]
+            ['Consumer', consumer],
+            ['SME', sme],
+            ['Auto', auto],
+            ['Student', student],
+            ['Property', property]
         ]});
 }
 

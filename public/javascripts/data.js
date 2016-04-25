@@ -9,7 +9,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Prosper',
-                policy: 'Unidentified'
+                policy: 'Consumer'
             },
             quantity: 4762,
             portfolioSummary: {
@@ -69,7 +69,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Prosper',
-                policy: 'Never Prime'
+                policy: 'Student'
             },
             quantity: 3896,
             portfolioSummary: {
@@ -129,7 +129,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Prosper',
-                policy: 'Prime'
+                policy: 'SME'
             },
             quantity: 3481,
             portfolioSummary: {
@@ -189,7 +189,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Prosper',
-                policy: 'Sub Prime'
+                policy: 'Auto'
             },
             quantity: 4394,
             portfolioSummary: {
@@ -249,7 +249,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Lending Club',
-                policy: 'Unidentified'
+                policy: 'Consumer'
             },
             quantity: 4782,
             portfolioSummary: {
@@ -309,7 +309,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Lending Club',
-                policy: 'Never Prime'
+                policy: 'Student'
             },
             quantity: 3456,
             portfolioSummary: {
@@ -369,7 +369,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Lending Club',
-                policy: 'Prime'
+                policy: 'SME'
             },
             quantity: 4289,
             portfolioSummary: {
@@ -429,7 +429,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Lending Club',
-                policy: 'Sub Prime'
+                policy: 'Auto'
             },
             quantity: 4843,
             portfolioSummary: {
@@ -489,7 +489,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Funding Circle',
-                policy: 'Unidentified'
+                policy: 'Consumer'
             },
             quantity: 4456,
             portfolioSummary: {
@@ -549,7 +549,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Funding Circle',
-                policy: 'Never Prime'
+                policy: 'Student'
             },
             quantity: 3922,
             portfolioSummary: {
@@ -609,7 +609,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Funding Circle',
-                policy: 'Prime'
+                policy: 'SME'
             },
             quantity: 3310,
             portfolioSummary: {
@@ -669,7 +669,7 @@ function loadData() {
             properties: {
                 country: 'UK',
                 originator: 'Funding Circle',
-                policy: 'Sub Prime'
+                policy: 'Auto'
             },
             quantity: 3253,
             portfolioSummary: {
@@ -729,7 +729,7 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Prosper',
-                policy: 'Unidentified'
+                policy: 'Consumer'
             },
             quantity: 4603,
             portfolioSummary: {
@@ -789,7 +789,7 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Prosper',
-                policy: 'Never Prime'
+                policy: 'Student'
             },
             quantity: 4263,
             portfolioSummary: {
@@ -849,7 +849,7 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Prosper',
-                policy: 'Prime'
+                policy: 'SME'
             },
             quantity: 3267,
             portfolioSummary: {
@@ -909,7 +909,7 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Prosper',
-                policy: 'Sub Prime'
+                policy: 'Auto'
             },
             quantity: 4696,
             portfolioSummary: {
@@ -969,7 +969,7 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Lending Club',
-                policy: 'Unidentified'
+                policy: 'Consumer'
             },
             quantity: 4188,
             portfolioSummary: {
@@ -1029,7 +1029,7 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Lending Club',
-                policy: 'Never Prime'
+                policy: 'Student'
             },
             quantity: 3529,
             portfolioSummary: {
@@ -1089,7 +1089,7 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Lending Club',
-                policy: 'Prime'
+                policy: 'SME'
             },
             quantity: 4789,
             portfolioSummary: {
@@ -1149,7 +1149,7 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Lending Club',
-                policy: 'Sub Prime'
+                policy: 'Auto'
             },
             quantity: 4817,
             portfolioSummary: {
@@ -1209,7 +1209,7 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Funding Circle',
-                policy: 'Unidentified'
+                policy: 'Consumer'
             },
             quantity: 4716,
             portfolioSummary: {
@@ -1269,7 +1269,7 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Funding Circle',
-                policy: 'Never Prime'
+                policy: 'Student'
             },
             quantity: 3595,
             portfolioSummary: {
@@ -1329,7 +1329,7 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Funding Circle',
-                policy: 'Prime'
+                policy: 'SME'
             },
             quantity: 3363,
             portfolioSummary: {
@@ -1389,7 +1389,367 @@ function loadData() {
             properties: {
                 country: 'US',
                 originator: 'Funding Circle',
-                policy: 'Sub Prime'
+                policy: 'Auto'
+            },
+            quantity: 4773,
+            portfolioSummary: {
+                totalOriginatorBalanceValue: 786012975,
+                totalOriginatorBalanceDelta: 0.12,
+                outstandingBalanceValue: 30925490,
+                outstandingBalanceDelta: -4.18,
+                purchasesValue: 1981456,
+                purchasesDelta: 0.029,
+                scheduledPrincipalPaidValue: 129832,
+                scheduledPrincipalPaidDelta: -4.21,
+                prepaymentsValue: 77553,
+                prepaymentsDelta: -19.01,
+                interestPaidValue: 454318,
+                interestPaidDelta: -5.28,
+                chargeOffsValue: 463447,
+                chargeOffsDelta: -21.32
+            },
+            loansCharacteristics: {
+                wtdAvgDtiValue: 20.37,
+                wtdAvgDtiDelta: 0.009,
+                wtdAvgOrigFicoValue: 774,
+                wtdAvgOrigFicoDelta: -0.00,
+                wtdAvgLoanAgeValue: 13,
+                wtdAvgLoanAgeDelta: 0.9,
+                wtdAvgMaturityValue: 35,
+                wtdAvgMaturityDelta: -1.21,
+                cdrValue: 12,
+                cdrDelta: -2.81,
+                cprValue: 15.02,
+                cprDelta: -2.70,
+            },
+            loanDelinquency: {
+                activePayerValue: 24362094,
+                activePayerDelta: 93.08,
+                currentValue: 32260221,
+                currentDelta: 109.95,
+                neverLateValue: 28162528,
+                neverLateDelta: 91.61,
+                delinquentValue: 1895174,
+                delinquentDelta: 5.19,
+            },
+            returns: {
+                wtdAvgCouponValue: 17.65,
+                wtdAvgCouponDelta: 0.05,
+                modelYieldValue: 6.07,
+                modelYieldDelta: 0.03,
+                modelPriceValue: 8.04,
+                modelPriceDelta: 2.74,
+                recoveriesValue: 2.50,
+                recoveriesDelta: -2.42,
+                interestPaidValue: 5.61,
+                interestPaidDelta: -0.03,
+            }
+        },
+        {
+            properties: {
+                country: 'UK',
+                originator: 'Lending Club',
+                policy: 'Property'
+            },
+            quantity: 4773,
+            portfolioSummary: {
+                totalOriginatorBalanceValue: 786012975,
+                totalOriginatorBalanceDelta: 0.12,
+                outstandingBalanceValue: 30925490,
+                outstandingBalanceDelta: -4.18,
+                purchasesValue: 1981456,
+                purchasesDelta: 0.029,
+                scheduledPrincipalPaidValue: 129832,
+                scheduledPrincipalPaidDelta: -4.21,
+                prepaymentsValue: 77553,
+                prepaymentsDelta: -19.01,
+                interestPaidValue: 454318,
+                interestPaidDelta: -5.28,
+                chargeOffsValue: 463447,
+                chargeOffsDelta: -21.32
+            },
+            loansCharacteristics: {
+                wtdAvgDtiValue: 20.37,
+                wtdAvgDtiDelta: 0.009,
+                wtdAvgOrigFicoValue: 774,
+                wtdAvgOrigFicoDelta: -0.00,
+                wtdAvgLoanAgeValue: 13,
+                wtdAvgLoanAgeDelta: 0.9,
+                wtdAvgMaturityValue: 35,
+                wtdAvgMaturityDelta: -1.21,
+                cdrValue: 12,
+                cdrDelta: -2.81,
+                cprValue: 15.02,
+                cprDelta: -2.70,
+            },
+            loanDelinquency: {
+                activePayerValue: 24362094,
+                activePayerDelta: 93.08,
+                currentValue: 32260221,
+                currentDelta: 109.95,
+                neverLateValue: 28162528,
+                neverLateDelta: 91.61,
+                delinquentValue: 1895174,
+                delinquentDelta: 5.19,
+            },
+            returns: {
+                wtdAvgCouponValue: 17.65,
+                wtdAvgCouponDelta: 0.05,
+                modelYieldValue: 6.07,
+                modelYieldDelta: 0.03,
+                modelPriceValue: 8.04,
+                modelPriceDelta: 2.74,
+                recoveriesValue: 2.50,
+                recoveriesDelta: -2.42,
+                interestPaidValue: 5.61,
+                interestPaidDelta: -0.03,
+            }
+        },
+        {
+            properties: {
+                country: 'UK',
+                originator: 'Prosper',
+                policy: 'Property'
+            },
+            quantity: 4773,
+            portfolioSummary: {
+                totalOriginatorBalanceValue: 786012975,
+                totalOriginatorBalanceDelta: 0.12,
+                outstandingBalanceValue: 30925490,
+                outstandingBalanceDelta: -4.18,
+                purchasesValue: 1981456,
+                purchasesDelta: 0.029,
+                scheduledPrincipalPaidValue: 129832,
+                scheduledPrincipalPaidDelta: -4.21,
+                prepaymentsValue: 77553,
+                prepaymentsDelta: -19.01,
+                interestPaidValue: 454318,
+                interestPaidDelta: -5.28,
+                chargeOffsValue: 463447,
+                chargeOffsDelta: -21.32
+            },
+            loansCharacteristics: {
+                wtdAvgDtiValue: 20.37,
+                wtdAvgDtiDelta: 0.009,
+                wtdAvgOrigFicoValue: 774,
+                wtdAvgOrigFicoDelta: -0.00,
+                wtdAvgLoanAgeValue: 13,
+                wtdAvgLoanAgeDelta: 0.9,
+                wtdAvgMaturityValue: 35,
+                wtdAvgMaturityDelta: -1.21,
+                cdrValue: 12,
+                cdrDelta: -2.81,
+                cprValue: 15.02,
+                cprDelta: -2.70,
+            },
+            loanDelinquency: {
+                activePayerValue: 24362094,
+                activePayerDelta: 93.08,
+                currentValue: 32260221,
+                currentDelta: 109.95,
+                neverLateValue: 28162528,
+                neverLateDelta: 91.61,
+                delinquentValue: 1895174,
+                delinquentDelta: 5.19,
+            },
+            returns: {
+                wtdAvgCouponValue: 17.65,
+                wtdAvgCouponDelta: 0.05,
+                modelYieldValue: 6.07,
+                modelYieldDelta: 0.03,
+                modelPriceValue: 8.04,
+                modelPriceDelta: 2.74,
+                recoveriesValue: 2.50,
+                recoveriesDelta: -2.42,
+                interestPaidValue: 5.61,
+                interestPaidDelta: -0.03,
+            }
+        },
+        {
+            properties: {
+                country: 'UK',
+                originator: 'Funding Circle',
+                policy: 'Property'
+            },
+            quantity: 4773,
+            portfolioSummary: {
+                totalOriginatorBalanceValue: 786012975,
+                totalOriginatorBalanceDelta: 0.12,
+                outstandingBalanceValue: 30925490,
+                outstandingBalanceDelta: -4.18,
+                purchasesValue: 1981456,
+                purchasesDelta: 0.029,
+                scheduledPrincipalPaidValue: 129832,
+                scheduledPrincipalPaidDelta: -4.21,
+                prepaymentsValue: 77553,
+                prepaymentsDelta: -19.01,
+                interestPaidValue: 454318,
+                interestPaidDelta: -5.28,
+                chargeOffsValue: 463447,
+                chargeOffsDelta: -21.32
+            },
+            loansCharacteristics: {
+                wtdAvgDtiValue: 20.37,
+                wtdAvgDtiDelta: 0.009,
+                wtdAvgOrigFicoValue: 774,
+                wtdAvgOrigFicoDelta: -0.00,
+                wtdAvgLoanAgeValue: 13,
+                wtdAvgLoanAgeDelta: 0.9,
+                wtdAvgMaturityValue: 35,
+                wtdAvgMaturityDelta: -1.21,
+                cdrValue: 12,
+                cdrDelta: -2.81,
+                cprValue: 15.02,
+                cprDelta: -2.70,
+            },
+            loanDelinquency: {
+                activePayerValue: 24362094,
+                activePayerDelta: 93.08,
+                currentValue: 32260221,
+                currentDelta: 109.95,
+                neverLateValue: 28162528,
+                neverLateDelta: 91.61,
+                delinquentValue: 1895174,
+                delinquentDelta: 5.19,
+            },
+            returns: {
+                wtdAvgCouponValue: 17.65,
+                wtdAvgCouponDelta: 0.05,
+                modelYieldValue: 6.07,
+                modelYieldDelta: 0.03,
+                modelPriceValue: 8.04,
+                modelPriceDelta: 2.74,
+                recoveriesValue: 2.50,
+                recoveriesDelta: -2.42,
+                interestPaidValue: 5.61,
+                interestPaidDelta: -0.03,
+            }
+        },
+        {
+            properties: {
+                country: 'US',
+                originator: 'Lending Club',
+                policy: 'Property'
+            },
+            quantity: 4773,
+            portfolioSummary: {
+                totalOriginatorBalanceValue: 786012975,
+                totalOriginatorBalanceDelta: 0.12,
+                outstandingBalanceValue: 30925490,
+                outstandingBalanceDelta: -4.18,
+                purchasesValue: 1981456,
+                purchasesDelta: 0.029,
+                scheduledPrincipalPaidValue: 129832,
+                scheduledPrincipalPaidDelta: -4.21,
+                prepaymentsValue: 77553,
+                prepaymentsDelta: -19.01,
+                interestPaidValue: 454318,
+                interestPaidDelta: -5.28,
+                chargeOffsValue: 463447,
+                chargeOffsDelta: -21.32
+            },
+            loansCharacteristics: {
+                wtdAvgDtiValue: 20.37,
+                wtdAvgDtiDelta: 0.009,
+                wtdAvgOrigFicoValue: 774,
+                wtdAvgOrigFicoDelta: -0.00,
+                wtdAvgLoanAgeValue: 13,
+                wtdAvgLoanAgeDelta: 0.9,
+                wtdAvgMaturityValue: 35,
+                wtdAvgMaturityDelta: -1.21,
+                cdrValue: 12,
+                cdrDelta: -2.81,
+                cprValue: 15.02,
+                cprDelta: -2.70,
+            },
+            loanDelinquency: {
+                activePayerValue: 24362094,
+                activePayerDelta: 93.08,
+                currentValue: 32260221,
+                currentDelta: 109.95,
+                neverLateValue: 28162528,
+                neverLateDelta: 91.61,
+                delinquentValue: 1895174,
+                delinquentDelta: 5.19,
+            },
+            returns: {
+                wtdAvgCouponValue: 17.65,
+                wtdAvgCouponDelta: 0.05,
+                modelYieldValue: 6.07,
+                modelYieldDelta: 0.03,
+                modelPriceValue: 8.04,
+                modelPriceDelta: 2.74,
+                recoveriesValue: 2.50,
+                recoveriesDelta: -2.42,
+                interestPaidValue: 5.61,
+                interestPaidDelta: -0.03,
+            }
+        },
+        {
+            properties: {
+                country: 'US',
+                originator: 'Prosper',
+                policy: 'Property'
+            },
+            quantity: 4773,
+            portfolioSummary: {
+                totalOriginatorBalanceValue: 786012975,
+                totalOriginatorBalanceDelta: 0.12,
+                outstandingBalanceValue: 30925490,
+                outstandingBalanceDelta: -4.18,
+                purchasesValue: 1981456,
+                purchasesDelta: 0.029,
+                scheduledPrincipalPaidValue: 129832,
+                scheduledPrincipalPaidDelta: -4.21,
+                prepaymentsValue: 77553,
+                prepaymentsDelta: -19.01,
+                interestPaidValue: 454318,
+                interestPaidDelta: -5.28,
+                chargeOffsValue: 463447,
+                chargeOffsDelta: -21.32
+            },
+            loansCharacteristics: {
+                wtdAvgDtiValue: 20.37,
+                wtdAvgDtiDelta: 0.009,
+                wtdAvgOrigFicoValue: 774,
+                wtdAvgOrigFicoDelta: -0.00,
+                wtdAvgLoanAgeValue: 13,
+                wtdAvgLoanAgeDelta: 0.9,
+                wtdAvgMaturityValue: 35,
+                wtdAvgMaturityDelta: -1.21,
+                cdrValue: 12,
+                cdrDelta: -2.81,
+                cprValue: 15.02,
+                cprDelta: -2.70,
+            },
+            loanDelinquency: {
+                activePayerValue: 24362094,
+                activePayerDelta: 93.08,
+                currentValue: 32260221,
+                currentDelta: 109.95,
+                neverLateValue: 28162528,
+                neverLateDelta: 91.61,
+                delinquentValue: 1895174,
+                delinquentDelta: 5.19,
+            },
+            returns: {
+                wtdAvgCouponValue: 17.65,
+                wtdAvgCouponDelta: 0.05,
+                modelYieldValue: 6.07,
+                modelYieldDelta: 0.03,
+                modelPriceValue: 8.04,
+                modelPriceDelta: 2.74,
+                recoveriesValue: 2.50,
+                recoveriesDelta: -2.42,
+                interestPaidValue: 5.61,
+                interestPaidDelta: -0.03,
+            }
+        },
+        {
+            properties: {
+                country: 'US',
+                originator: 'Funding Circle',
+                policy: 'Property'
             },
             quantity: 4773,
             portfolioSummary: {
