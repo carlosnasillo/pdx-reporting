@@ -22,12 +22,30 @@ function renderData(objects) {
                 }
             });
         });
+
+
         return prev;
     }, {});
+
+    var objectSize = objects.length;
+    average(sum.returns, objectSize);
+    average(sum.loansCharacteristics, objectSize);
 
     categories.forEach(function(cat) {
         renderObject(sum, cat);
     });
+
+    function average(category, listSize) {
+        _.keys(category)
+            .filter(function(k) {
+                return k.indexOf('Value') >= 0;
+            })
+            .forEach(function(k) {
+                category[k] = category[k] / listSize;
+            });
+
+        return category;
+    }
 
     function renderObject(o, prop) {
         _.keys(o[prop]).forEach(function (k) {
