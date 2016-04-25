@@ -81,6 +81,9 @@ function onFilterUpdate(d) {
 
 function initPolicyChart(unidentified, neverPrime, prime, subPrime) {
     return c3.generate({
+        tooltip: {
+            show: false
+        },
         bindto: '#policy',
         data: {
             columns: [
@@ -112,6 +115,9 @@ function initPolicyChart(unidentified, neverPrime, prime, subPrime) {
 
 function initOriginatorChart(prosper, lc, fc) {
     return c3.generate({
+        tooltip: {
+            show: false
+        },
         bindto: '#originator',
         data: {
             columns: [
@@ -141,6 +147,9 @@ function initOriginatorChart(prosper, lc, fc) {
 
 function initCountryChart(uk, usa) {
     return c3.generate({
+        tooltip: {
+            show: false
+        },
         bindto: '#country',
         data: {
             columns: [
