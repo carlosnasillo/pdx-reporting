@@ -14,3 +14,13 @@
     margin-top: 13px;
     margin-left: 10px;
 }
+
+.logo {
+    width: 110px;
+    margin-left: 45px;
+    margin-top: 4px;
+}
+
+.navbar-brand {
+    padding: 0;
+}
