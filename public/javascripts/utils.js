@@ -279,7 +279,7 @@ function unifyHeights(classs) {
 }
 
 var margin = 20;
-var fillingRatio = 0.7;
+var fillingRatio = 0.65;
 function unifyHeightsGlobal() {
     var heightSum = [
         unifyHeights('data-panel-top'),
