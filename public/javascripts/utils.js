@@ -105,7 +105,7 @@ function initPolicyChart(unidentified, neverPrime, prime, subPrime) {
             }
         },
         legend: {
-            position: 'inset'
+            position: 'bottom'
         }
     });
 }
@@ -134,7 +134,7 @@ function initOriginatorChart(prosper, lc, fc) {
             }
         },
         legend: {
-            position: 'inset'
+            position: 'bottom'
         }
     });
 }
@@ -161,7 +161,7 @@ function initCountryChart(uk, usa) {
             }
         },
         legend: {
-            position: 'inset'
+            position: 'bottom'
         }
     });
 }
