@@ -11,6 +11,7 @@ function loadData() {
                 originator: 'Prosper',
                 policy: 'Consumer'
             },
+            lateLoans: [ 13, 51, 79, 45 ],
             quantity: 4762,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 569906842,
@@ -71,6 +72,7 @@ function loadData() {
                 originator: 'Prosper',
                 policy: 'Student'
             },
+            lateLoans: [ 87, 14, 74, 61 ],
             quantity: 3896,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 733520709,
@@ -131,6 +133,7 @@ function loadData() {
                 originator: 'Prosper',
                 policy: 'SME'
             },
+            lateLoans: [ 78, 7, 36, 24 ],
             quantity: 3481,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 773015243,
@@ -191,6 +194,7 @@ function loadData() {
                 originator: 'Prosper',
                 policy: 'Auto'
             },
+            lateLoans: [ 12, 57, 58, 57 ],
             quantity: 4394,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 643220569,
@@ -251,6 +255,7 @@ function loadData() {
                 originator: 'Lending Club',
                 policy: 'Consumer'
             },
+            lateLoans: [ 96, 59, 17, 68 ],
             quantity: 4782,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 792026064,
@@ -311,6 +316,7 @@ function loadData() {
                 originator: 'Lending Club',
                 policy: 'Student'
             },
+            lateLoans: [ 100, 82, 68, 59 ],
             quantity: 3456,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 709232511,
@@ -371,6 +377,7 @@ function loadData() {
                 originator: 'Lending Club',
                 policy: 'SME'
             },
+            lateLoans: [ 47, 54, 66, 30 ],
             quantity: 4289,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 561977948,
@@ -431,6 +438,7 @@ function loadData() {
                 originator: 'Lending Club',
                 policy: 'Auto'
             },
+            lateLoans: [ 83, 60, 48, 92 ],
             quantity: 4843,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 663446329,
@@ -491,6 +499,7 @@ function loadData() {
                 originator: 'Funding Circle',
                 policy: 'Consumer'
             },
+            lateLoans: [ 43, 27, 85, 29 ],
             quantity: 4456,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 740936399,
@@ -551,6 +560,7 @@ function loadData() {
                 originator: 'Funding Circle',
                 policy: 'Student'
             },
+            lateLoans: [ 12, 88, 62, 71 ],
             quantity: 3922,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 684990036,
@@ -611,6 +621,7 @@ function loadData() {
                 originator: 'Funding Circle',
                 policy: 'SME'
             },
+            lateLoans: [ 42, 69, 48, 96 ],
             quantity: 3310,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 570353838,
@@ -671,6 +682,7 @@ function loadData() {
                 originator: 'Funding Circle',
                 policy: 'Auto'
             },
+            lateLoans: [ 55, 28, 99, 79 ],
             quantity: 3253,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 684340298,
@@ -731,6 +743,7 @@ function loadData() {
                 originator: 'Prosper',
                 policy: 'Consumer'
             },
+            lateLoans: [ 40, 31, 49, 45 ],
             quantity: 4603,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 724748017,
@@ -791,6 +804,7 @@ function loadData() {
                 originator: 'Prosper',
                 policy: 'Student'
             },
+            lateLoans: [ 36, 16, 24, 57 ],
             quantity: 4263,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 775062668,
@@ -851,6 +865,7 @@ function loadData() {
                 originator: 'Prosper',
                 policy: 'SME'
             },
+            lateLoans: [ 74, 37, 30, 96 ],
             quantity: 3267,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 660177468,
@@ -911,6 +926,7 @@ function loadData() {
                 originator: 'Prosper',
                 policy: 'Auto'
             },
+            lateLoans: [ 7, 37, 95, 37 ],
             quantity: 4696,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 789899164,
@@ -971,6 +987,7 @@ function loadData() {
                 originator: 'Lending Club',
                 policy: 'Consumer'
             },
+            lateLoans: [ 59, 53, 50, 63 ],
             quantity: 4188,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 662704161,
@@ -1031,6 +1048,7 @@ function loadData() {
                 originator: 'Lending Club',
                 policy: 'Student'
             },
+            lateLoans: [ 75, 98, 40, 57 ],
             quantity: 3529,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 731302459,
@@ -1091,6 +1109,7 @@ function loadData() {
                 originator: 'Lending Club',
                 policy: 'SME'
             },
+            lateLoans: [ 5, 11, 23, 16 ],
             quantity: 4789,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 721000748,
@@ -1151,6 +1170,7 @@ function loadData() {
                 originator: 'Lending Club',
                 policy: 'Auto'
             },
+            lateLoans: [ 96, 64, 87, 73 ],
             quantity: 4817,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 535522693,
@@ -1211,6 +1231,7 @@ function loadData() {
                 originator: 'Funding Circle',
                 policy: 'Consumer'
             },
+            lateLoans: [ 73, 13, 19, 69 ],
             quantity: 4716,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 655213641,
@@ -1271,6 +1292,7 @@ function loadData() {
                 originator: 'Funding Circle',
                 policy: 'Student'
             },
+            lateLoans: [ 67, 51, 37, 18 ],
             quantity: 3595,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 735408788,
@@ -1331,6 +1353,7 @@ function loadData() {
                 originator: 'Funding Circle',
                 policy: 'SME'
             },
+            lateLoans: [ 55, 43, 81, 13 ],
             quantity: 3363,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 739389569,
@@ -1391,6 +1414,7 @@ function loadData() {
                 originator: 'Funding Circle',
                 policy: 'Auto'
             },
+            lateLoans: [ 87, 43, 99, 11 ],
             quantity: 4773,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 786012975,
@@ -1451,6 +1475,7 @@ function loadData() {
                 originator: 'Lending Club',
                 policy: 'Property'
             },
+            lateLoans: [ 53, 63, 62, 75 ],
             quantity: 4773,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 786012975,
@@ -1511,6 +1536,7 @@ function loadData() {
                 originator: 'Prosper',
                 policy: 'Property'
             },
+            lateLoans: [ 40, 91, 63, 8 ],
             quantity: 4773,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 786012975,
@@ -1571,6 +1597,7 @@ function loadData() {
                 originator: 'Funding Circle',
                 policy: 'Property'
             },
+            lateLoans: [ 14, 77, 56, 27 ],
             quantity: 4773,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 786012975,
@@ -1631,6 +1658,7 @@ function loadData() {
                 originator: 'Lending Club',
                 policy: 'Property'
             },
+            lateLoans: [ 30, 53, 63, 8 ],
             quantity: 4773,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 786012975,
@@ -1691,6 +1719,7 @@ function loadData() {
                 originator: 'Prosper',
                 policy: 'Property'
             },
+            lateLoans: [ 89, 54, 87, 49 ],
             quantity: 4773,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 786012975,
@@ -1751,6 +1780,7 @@ function loadData() {
                 originator: 'Funding Circle',
                 policy: 'Property'
             },
+            lateLoans: [ 76, 37, 34, 93 ],
             quantity: 4773,
             portfolioSummary: {
                 totalOriginatorBalanceValue: 786012975,

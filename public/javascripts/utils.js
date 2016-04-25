@@ -222,10 +222,12 @@ function extractChartData(data) {
         var originator = cur.properties.originator;
         var policy = cur.properties.policy;
         var quantity = cur.quantity;
+        var lateLoans = cur.lateLoans;
 
         prev[country] = prev[country] + quantity;
         prev[originator] = prev[originator] + quantity;
         prev[policy] = prev[policy] + quantity;
+        prev.lateLoans = prev.lateLoans.map(function(v, i) { return v + lateLoans[i]});
 
         return prev;
     }, {
@@ -238,14 +240,13 @@ function extractChartData(data) {
         SME: 0,
         Auto: 0,
         Student: 0,
-        Property: 0
+        Property: 0,
+        lateLoans: [0, 0, 0, 0]
     });
 }
 
 var countryChart, originatorChart, policyChart;
-function initCharts(data) {
-    var chartsData = extractChartData(data);
-
+function initCharts(chartsData) {
     countryChart = initCountryChart(filterChartData(chartsData, countries));
     originatorChart = initOriginatorChart(filterChartData(chartsData, originators));
     policyChart = initPolicyChart(filterChartData(chartsData, policies));
@@ -267,6 +268,7 @@ function updateCharts(data) {
     updateChart(countryChart, filterChartData(chartData, countries));
     updateChart(originatorChart, filterChartData(chartData, originators));
     updateChart(policyChart, filterChartData(chartData, policies));
+    updateStackedHorizontalBarChart(chartData.lateLoans);
 }
 
 function updateChart(chart, data) {
@@ -318,4 +320,55 @@ function unifyHeightsGlobal() {
     $chart.each(function() {
         $(this).css('height', (heightSum / nbCharts) * fillingRatio);
     });
+}
+
+function updateStackedHorizontalBarChart(data) {
+    $('#delinquencyBreakdown').children().remove();
+    drawStackedHorizontalBarChart(data);
+}
+
+function drawStackedHorizontalBarChart(data) {
+    data.sort(function(a, b){return a-b;});
+
+    var width = "100%",
+        height = 70,
+        perc_so_far = 0;
+
+
+    var total_time = d3.sum(data);
+    var chart = d3.select("#delinquencyBreakdown")
+        .attr("width", width)
+        .attr("height", height);
+
+    var bar = chart.selectAll("g")
+        .data(data)
+        .enter().append("g");
+
+    bar.append("rect")
+        .attr("width", function(d) { return ((d/total_time)*100) + "%"; } )
+        .attr("x", function(d) {
+            var prev_perc = perc_so_far;
+            var this_perc = 100*(d/total_time);
+            perc_so_far = perc_so_far + this_perc;
+            return prev_perc + "%";
+        })
+        .attr("height", height)
+        .attr("fill",  function(d, i) { return chartColors[i]; } );
+
+    perc_so_far = 0;
+    bar.append("text")
+        .attr("x", function(d) {
+            var this_perc = 100*(d/total_time);
+            var prev_perc_so_far = perc_so_far;
+            perc_so_far = this_perc + perc_so_far;
+            return prev_perc_so_far + this_perc/2.7 + "%";
+        })
+        .attr("dy", "50%")
+        .text(function(d) { return d; });
+
+    d3.select(window).on('resize', resize);
+
+    function resize () {
+        var width = parseInt(d3.select("#chart").style("width"));
+    }
 }

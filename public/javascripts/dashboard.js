@@ -5,7 +5,10 @@
 
     renderData(originalData);
     unifyHeightsGlobal();
-    initCharts(originalData);
+
+    var chartsData = extractChartData(originalData);
+    initCharts(chartsData);
+    drawStackedHorizontalBarChart(chartsData.lateLoans);
 
     setDateHeaders();
 
