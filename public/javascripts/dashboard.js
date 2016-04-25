@@ -3,16 +3,17 @@
 
     var originalData = loadData();
 
-    initCharts(originalData);
     renderData(originalData);
+    unifyHeightsGlobal();
+    initCharts(originalData);
 
     setDateHeaders();
 
-    unifyHeights('data-panel-top');
-    unifyHeights('data-panel-bottom');
+    $(window).resize(function() {
+        unifyHeightsGlobal();
 
-    $( window ).resize(function() {
-        unifyHeights('data-panel-top');
-        unifyHeights('data-panel-bottom');
+        setTimeout(function() {
+            initCharts(originalData);
+        }, 300);
     });
 }());

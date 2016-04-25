@@ -275,4 +275,24 @@ function unifyHeights(classs) {
         }
     });
     $data.css('height', maxHeight);
+    return maxHeight;
+}
+
+var margin = 20;
+var fillingRatio = 0.7;
+function unifyHeightsGlobal() {
+    var heightSum = [
+        unifyHeights('data-panel-top'),
+        unifyHeights('data-panel-bottom')
+    ]
+        .reduce(function(agg, cur) { return cur + agg + margin; }, -margin);
+
+    $('.dashboard-charts').each(function() {
+        $(this).css('height', heightSum);
+    });
+    var $chart = $('.chart');
+    var nbCharts = $chart.size();
+    $chart.each(function() {
+        $(this).css('height', (heightSum / nbCharts) * fillingRatio);
+    });
 }
