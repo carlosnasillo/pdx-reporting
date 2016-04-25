@@ -5,6 +5,12 @@
 
 var filters = [];
 
+var originators = ['Prosper', 'Lending Club', 'Funding Circle'];
+var policies = ['Consumer', 'SME', 'Auto', 'Student', 'Property'];
+var countries = ['US', 'UK'];
+
+var chartColors = ['#f6a821', '#949ba2', '#c0392b', '#616779', '#f9690e'];
+
 function renderData(objects) {
     var categories = ['portfolioSummary', 'loansCharacteristics', 'loanDelinquency', 'returns'];
 
@@ -91,28 +97,22 @@ function updateFilterButtons() {
     })
 }
 
-function onFilterUpdate(d) {
-    addFilter(d);
+function onFilterUpdate(id) {
+    addFilter(id);
     updateData();
     updateFilterButtons();
 }
 
-function initPolicyChart(consumer, sme, auto, student, property) {
+function initPolicyChart(data) {
     return c3.generate({
         tooltip: {
             show: false
         },
         bindto: '#policy',
         data: {
-            columns: [
-                ['Consumer', consumer],
-                ['SME', sme],
-                ['Auto', auto],
-                ['Student', student],
-                ['Property', property]
-            ],
+            columns: _.pairs(data),
             type : 'donut',
-            onclick: onFilterUpdate,
+            onclick: function(obj) { onFilterUpdate(obj.id); },
             colors: {
                 'Consumer': '#f6a821',
                 'SME': '#949ba2',
@@ -128,25 +128,24 @@ function initPolicyChart(consumer, sme, auto, student, property) {
             }
         },
         legend: {
-            position: 'bottom'
+            position: 'bottom',
+            item: {
+                onclick: function(id) { onFilterUpdate(id); }
+            }
         }
     });
 }
 
-function initOriginatorChart(prosper, lc, fc) {
+function initOriginatorChart(data) {
     return c3.generate({
         tooltip: {
             show: false
         },
         bindto: '#originator',
         data: {
-            columns: [
-                ['Prosper', prosper],
-                ['Lending Club', lc],
-                ['Funding Circle', fc]
-            ],
+            columns: _.pairs(data),
             type : 'donut',
-            onclick: onFilterUpdate,
+            onclick: function(obj) { onFilterUpdate(obj.id); },
             colors: {
                 'Prosper': '#f6a821',
                 'Lending Club': '#949ba2',
@@ -160,24 +159,24 @@ function initOriginatorChart(prosper, lc, fc) {
             }
         },
         legend: {
-            position: 'bottom'
+            position: 'bottom',
+            item: {
+                onclick: function(id) { onFilterUpdate(id); }
+            }
         }
     });
 }
 
-function initCountryChart(uk, usa) {
+function initCountryChart(data) {
     return c3.generate({
         tooltip: {
             show: false
         },
         bindto: '#country',
         data: {
-            columns: [
-                ['UK', uk],
-                ['US', usa]
-            ],
+            columns: _.pairs(data),
             type : 'donut',
-            onclick: onFilterUpdate,
+            onclick: function(obj) { onFilterUpdate(obj.id); },
             colors: {
                 UK: '#f6a821',
                 US: '#949ba2'
@@ -190,13 +189,16 @@ function initCountryChart(uk, usa) {
             }
         },
         legend: {
-            position: 'bottom'
+            position: 'bottom',
+            item: {
+                onclick: function(id) { onFilterUpdate(id); }
+            }
         }
     });
 }
 
-function addFilter(d) {
-    filters = _.uniq(filters.concat([d.id]));
+function addFilter(id) {
+    filters = _.uniq(filters.concat([id]));
 }
 
 function extractChartData(data) {
@@ -229,45 +231,33 @@ var countryChart, originatorChart, policyChart;
 function initCharts(data) {
     var chartsData = extractChartData(data);
 
-    countryChart = initCountryChart(chartsData.UK, chartsData.US);
-    originatorChart = initOriginatorChart(chartsData.Prosper, chartsData['Lending Club'], chartsData['Funding Circle']);
-    policyChart = initPolicyChart(chartsData.Consumer, chartsData.SME, chartsData.Auto, chartsData.Student, chartsData.Property);
+    countryChart = initCountryChart(filterChartData(chartsData, countries));
+    originatorChart = initOriginatorChart(filterChartData(chartsData, originators));
+    policyChart = initPolicyChart(filterChartData(chartsData, policies));
+}
+
+function filterChartData(data, keysToKeep) {
+    var result = {};
+    _.keys(data).forEach(function(k) {
+        if (keysToKeep.indexOf(k) >= 0) {
+            result[k] = data[k];
+        }
+    });
+    return result;
 }
 
 function updateCharts(data) {
     var chartData = extractChartData(data);
 
-    updateCountryChart(chartData.UK, chartData.US);
-    updateOriginatorChart(chartData.Prosper, chartData['Lending Club'], chartData['Funding Circle']);
-    updatePolicyChart(chartData.Consumer, chartData.SME, chartData.Auto, chartData.Student, chartData.Property);
+    updateChart(countryChart, filterChartData(chartData, countries));
+    updateChart(originatorChart, filterChartData(chartData, originators));
+    updateChart(policyChart, filterChartData(chartData, policies));
 }
 
-function updateCountryChart(uk, usa) {
-    countryChart.load({
-        columns: [
-            ['UK', uk],
-            ['US', usa]
-        ]});
-}
-
-function updateOriginatorChart(prosper, lc, fc) {
-    originatorChart.load({
-        columns: [
-            ['Prosper', prosper],
-            ['Lending Club', lc],
-            ['Funding Circle', fc]
-        ]});
-}
-
-function updatePolicyChart(consumer, sme, auto, student, property) {
-    policyChart.load({
-        columns: [
-            ['Consumer', consumer],
-            ['SME', sme],
-            ['Auto', auto],
-            ['Student', student],
-            ['Property', property]
-        ]});
+function updateChart(chart, data) {
+    chart.load({
+        columns: _.pairs(data)
+    });
 }
 
 function updateData() {
