@@ -18,19 +18,19 @@
 
                 <div class="panel panel-filled">
                     <div class="panel-body">
-                        <form action="@routes.ApplicationController.index()" id="loginForm" novalidate>
-                            <div class="form-group">
-                                <label class="control-label" for="username">Username</label>
-                                <input type="text" placeholder="example@@pdx.technology" title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label" for="password">Password</label>
-                                <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
-                            </div>
-                            <div>
-                                <button class="btn btn-accent">Login</button>
-                            </div>
-                        </form>
+                        <div class="form-group">
+                            <label class="control-label" for="username">Username</label>
+                            <input type="text" placeholder="example@@pdx.technology" title="Please enter you username" required="" value="" name="username" id="username" class="form-control">
+                            <span id="err-username" class="help-block small"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="password">Password</label>
+                            <input type="password" title="Please enter your password" placeholder="******" required="" value="" name="password" id="password" class="form-control">
+                            <span id="err-password" class="help-block small"></span>
+                        </div>
+                        <div>
+                            <button id="login" class="btn btn-accent">Login</button>
+                        </div>
                     </div>
                 </div>
 
@@ -43,4 +43,29 @@
     <script src="@routes.Assets.versioned("vendor/bootstrap/js/bootstrap.min.js")"></script>
 
     <script src="@routes.Assets.versioned("javascripts/luna.js")"></script>
+
+    <script>
+        $('#login').click(function() {
+            var $errUsername = $('#err-username');
+            var $errPassword = $('#err-password');
+
+            $errUsername.html("");
+            $errPassword.html("");
+
+            var username = $('#username').val().trim();
+            var password = $('#password').val().trim();
+
+            if (username.length > 0 && password.length > 0) {
+                window.location = "@routes.ApplicationController.index()";
+            }
+            else {
+                if (username.length == 0) {
+                    $errUsername.html("Please enter the requested email address.");
+                }
+                if (password.length == 0) {
+                    $errPassword.html("Please enter your password.");
+                }
+            }
+        });
+    </script>
 }
